@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Lists</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Add new friend to the list</h1>
+    <form th:action="@{/add}" th:object="${friend}" method="post">
+    	<div>
+            <label>First Name:</label>
+            <input type="text" th:field="*{firstName}" />
+            <label>Last Name:</label>
+            <input type="text" th:field="*{lastName}" />
+        </div>
+        <p><input type="submit" value="Add Friend" /></p>
+    </form>
+</body>
+</html>
